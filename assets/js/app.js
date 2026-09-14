@@ -1,5 +1,5 @@
 console.log('app.js carregado');
-``
+`
     const viewSelector =
 document.getElementById('viewSelector');
 
