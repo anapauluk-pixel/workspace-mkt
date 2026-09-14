@@ -1,4 +1,6 @@
-const viewSelector =
+console.log('app.js carregado');
+``
+    const viewSelector =
 document.getElementById('viewSelector');
 
 viewSelector.addEventListener('change', function(){
