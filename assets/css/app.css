@@ -1,78 +1,426 @@
-/* INÍCIO */
+/* ==================================================
+   RESET
+================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Inter,Segoe UI,sans-serif;
+}
+
+body{
+    display:flex;
+    height:100vh;
+    background:#F7F9FC;
+    color:#1E293B;
+}
+
+/* ==================================================
+   LAYOUT
+================================================== */
+
+.content{
+    flex:1;
+    padding:32px;
+    overflow:auto;
+}
+
+.page-title h2{
+    font-size:34px;
+    margin-bottom:6px;
+}
+
+.page-title p{
+    color:#64748B;
+    margin-bottom:24px;
+}
+
+.card{
+    background:white;
+    padding:24px;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.05);
+}
+
+/* ==================================================
+   SIDEBAR
+================================================== */
+
+.sidebar{
+    width:260px;
+    background:#00995D;
+    color:white;
+    padding:24px;
+    flex-shrink:0;
+}
+
+.logo{
+    margin-bottom:40px;
+}
+
+.logo h1{
+    font-size:28px;
+    font-weight:700;
+}
+
+.logo p{
+    font-size:13px;
+    opacity:.85;
+}
+
+.menu{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.menu-item{
+    padding:14px 16px;
+    border-radius:12px;
+    cursor:pointer;
+}
+
+.menu-item.active{
+    background:rgba(255,255,255,.18);
+}
+
+/* ==================================================
+   FILTROS
+================================================== */
+
+.filters{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-bottom:24px;
+}
+
+.filters input,
+.filters select{
+    height:46px;
+    padding:0 14px;
+    border:1px solid #E2E8F0;
+    border-radius:12px;
+    background:white;
+    outline:none;
+}
+
+.filters input{
+    min-width:260px;
+}
+
+.view-selector{
+    margin-left:auto;
+}
+
+/* ==================================================
+   INÍCIO
+================================================== */
 
 .home-kpis{
-
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:16px;
-
     margin-bottom:24px;
 }
 
 .kpi-card{
-
     background:white;
-
     padding:24px;
-
     border-radius:20px;
-
     box-shadow:0 10px 20px rgba(0,0,0,.05);
-
     display:flex;
-
     flex-direction:column;
 }
 
 .kpi-number{
-
     font-size:40px;
-
     font-weight:700;
 }
 
 .kpi-label{
-
     color:#64748B;
-
     margin-top:8px;
 }
 
 .home-row{
-
     display:grid;
-
     grid-template-columns:2fr 1fr;
-
     gap:16px;
-
     margin-bottom:24px;
-
-    width:100%;
 }
 
 .home-row > .card{
-
     width:100%;
 }
 
 .placeholder-large{
-
     height:320px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     border:2px dashed #CBD5E1;
-
     border-radius:12px;
-
     color:#94A3B8;
-
     margin-top:16px;
 }
+
+/* ==================================================
+   KANBAN
+================================================== */
+
+.kanban-board{
+    display:flex;
+    gap:16px;
+    overflow-x:auto;
+    padding-bottom:12px;
+    scrollbar-width:none;
+}
+
+.kanban-board::-webkit-scrollbar{
+    display:none;
+}
+
+.kanban-column{
+    min-width:320px;
+    background:#F1F5F9;
+    border-radius:16px;
+    padding:14px;
+}
+
+.column-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:12px;
+}
+
+.column-count{
+    background:white;
+    padding:4px 10px;
+    border-radius:999px;
+    font-size:12px;
+    color:#64748B;
+}
+
+.placeholder{
+    height:500px;
+    border:2px dashed #CBD5E1;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#94A3B8;
+    font-size:13px;
+    margin-top:12px;
+}
+
+/* ==================================================
+   LISTA
+================================================== */
+
+.list-container{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+}
+
+.list-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.list-table th{
+    padding:16px;
+    background:#F8FAFC;
+    text-align:left;
+    border-bottom:1px solid #E2E8F0;
+    font-size:14px;
+}
+
+.list-table td{
+    padding:16px;
+    border-bottom:1px solid #E2E8F0;
+}
+
+.list-placeholder{
+    height:300px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#94A3B8;
+    font-size:13px;
+}
+
+/* ==================================================
+   CALENDÁRIO
+================================================== */
+
+.calendar-container{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:8px;
+}
+
+.calendar-header{
+    text-align:center;
+    font-weight:600;
+    padding:12px;
+    color:#64748B;
+}
+
+.calendar-day{
+    min-height:120px;
+    background:#F8FAFC;
+    border:1px solid #E2E8F0;
+    border-radius:12px;
+    padding:10px;
+    color:#64748B;
+}
+
+/* ==================================================
+   GANTT
+================================================== */
+
+.gantt-container{
+    border:1px solid #E2E8F0;
+    border-radius:16px;
+    overflow:hidden;
+}
+
+.gantt-header{
+    display:flex;
+    background:#F8FAFC;
+    border-bottom:1px solid #E2E8F0;
+}
+
+.gantt-task-column{
+    width:280px;
+    padding:16px;
+    font-weight:600;
+    border-right:1px solid #E2E8F0;
+}
+
+.gantt-timeline{
+    flex:1;
+    display:grid;
+    grid-template-columns:repeat(10,1fr);
+}
+
+.gantt-timeline div{
+    padding:16px;
+    text-align:center;
+    border-right:1px solid #E2E8F0;
+    color:#64748B;
+}
+
+.gantt-row{
+    display:flex;
+    min-height:80px;
+    border-bottom:1px solid #E2E8F0;
+}
+
+.gantt-bar-area{
+    flex:1;
+    background:#FFFFFF;
+}
+
+/* ==================================================
+   CARD PADRÃO
+================================================== */
+
+.task-card{
+    background:white;
+    border-radius:16px;
+    padding:14px;
+    box-shadow:0 4px 10px rgba(0,0,0,.05);
+}
+
+.task-id{
+    font-size:12px;
+    color:#94A3B8;
+    margin-bottom:10px;
+}
+
+.task-title{
+    font-size:15px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.task-area,
+.task-owner{
+    font-size:13px;
+    color:#64748B;
+    margin-bottom:4px;
+}
+
+.task-tags{
+    display:flex;
+    gap:8px;
+    margin:12px 0;
+}
+
+.tag-priority,
+.tag-sla{
+    font-size:12px;
+    border-radius:999px;
+    padding:4px 8px;
+}
+
+.tag-priority{
+    background:#FEE2E2;
+    color:#DC2626;
+}
+
+.tag-sla{
+    background:#FEF3C7;
+    color:#D97706;
+}
+
+.task-deadline{
+    font-size:13px;
+    margin-bottom:12px;
+}
+
+.task-progress{
+    height:8px;
+    background:#E2E8F0;
+    border-radius:999px;
+    overflow:hidden;
+}
+
+.task-progress-bar{
+    width:65%;
+    height:100%;
+    background:#00995D;
+}
+
+.task-progress-text{
+    margin-top:8px;
+    font-size:13px;
+    font-weight:600;
+}
+
+.task-footer{
+    margin-top:12px;
+    display:flex;
+    gap:16px;
+    font-size:13px;
+    color:#64748B;
+}
+
+/* ==================================================
+   COMPONENTES FUTUROS
+================================================== */
+
+/*
+- Gráfico de Demandas por Etapa
+- Avisos
+- Últimas Movimentações
+- Capacidade da Equipe
+- Modal da Demanda
+- Aprovações
+- Indicadores Avançados
+*/
