@@ -188,3 +188,55 @@ font-size:13px;
 
 margin-top:12px;
 }
+/* LISTA */
+
+.list-container{
+
+    background:white;
+
+    border-radius:16px;
+
+    overflow:hidden;
+}
+
+.list-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+.list-table th{
+
+    padding:16px;
+
+    background:#F8FAFC;
+
+    text-align:left;
+
+    border-bottom:1px solid #E2E8F0;
+
+    font-size:14px;
+}
+
+.list-table td{
+
+    padding:16px;
+
+    border-bottom:1px solid #E2E8F0;
+}
+
+.list-placeholder{
+
+    height:300px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#94A3B8;
+
+    font-size:13px;
+}
