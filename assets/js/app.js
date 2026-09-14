@@ -1,4 +1,9 @@
 const viewSelector =
 document.getElementById('viewSelector');
 
-alert(viewSelector);
+viewSelector.addEventListener('change', function(){
+
+    alert(this.value);
+
+});
+``
