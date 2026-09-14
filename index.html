@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1">
 
 <title>Marketing Workspace</title>
 
@@ -19,13 +23,17 @@ body{
 display:flex;
 height:100vh;
 background:#F7F9FC;
+color:#1E293B;
 }
+
+/* SIDEBAR */
 
 .sidebar{
 width:260px;
 background:#00995D;
 color:white;
 padding:24px;
+flex-shrink:0;
 }
 
 .logo{
@@ -34,21 +42,22 @@ margin-bottom:40px;
 
 .logo h1{
 font-size:28px;
+font-weight:700;
 }
 
 .logo p{
 font-size:13px;
-opacity:.9;
+opacity:.85;
 }
 
 .menu{
 display:flex;
 flex-direction:column;
-gap:10px;
+gap:8px;
 }
 
 .menu-item{
-padding:14px;
+padding:14px 16px;
 border-radius:12px;
 cursor:pointer;
 }
@@ -57,65 +66,149 @@ cursor:pointer;
 background:rgba(255,255,255,.18);
 }
 
+/* CONTEÚDO */
+
 .content{
 flex:1;
 padding:32px;
 overflow:auto;
 }
 
-.header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:30px;
-}
+/* HEADER */
 
-.header h2{
+.page-title h2{
 font-size:34px;
+margin-bottom:6px;
 }
 
-.kpis{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+.page-title p{
+color:#64748B;
 margin-bottom:24px;
 }
 
-.kpi{
+/* FILTROS */
+
+.filters{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-bottom:24px;
+}
+
+.filters input,
+.filters select{
+
+height:46px;
+
+padding:0 14px;
+
+border:1px solid #E2E8F0;
+
+border-radius:12px;
+
 background:white;
-padding:24px;
-border-radius:20px;
-box-shadow:0 10px 20px rgba(0,0,0,.05);
+
+outline:none;
 }
 
-.kpi-number{
-font-size:42px;
-font-weight:700;
+.filters input{
+min-width:260px;
 }
 
-.kpi-label{
-color:#64748B;
-margin-top:6px;
+.view-selector{
+margin-left:auto;
 }
+
+/* CARD */
 
 .card{
 background:white;
 padding:24px;
 border-radius:20px;
 box-shadow:0 10px 20px rgba(0,0,0,.05);
-margin-bottom:20px;
+}
+
+/* KANBAN */
+
+.kanban-board{
+
+display:flex;
+
+gap:16px;
+
+overflow-x:auto;
+
+padding-bottom:12px;
+}
+
+.kanban-column{
+
+min-width:320px;
+
+background:#F1F5F9;
+
+border-radius:16px;
+
+padding:14px;
+}
+
+.column-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:12px;
+}
+
+.column-count{
+
+background:white;
+
+padding:4px 10px;
+
+border-radius:999px;
+
+font-size:12px;
+
+color:#64748B;
+}
+
+.placeholder{
+
+padding:16px;
+
+border:2px dashed #CBD5E1;
+
+border-radius:12px;
+
+text-align:center;
+
+font-size:13px;
+
+color:#94A3B8;
+
+margin-top:12px;
 }
 
 </style>
 
 </head>
+
 <body>
+
+<!-- SIDEBAR -->
 
 <div class="sidebar">
 
 <div class="logo">
+
 <h1>Marketing</h1>
+
 <p>Workspace</p>
+
 </div>
 
 <div class="menu">
@@ -136,129 +229,63 @@ Configurações
 
 </div>
 
+<!-- CONTEÚDO -->
+
 <div class="content">
 
-<div class="header">
+<div class="page-title">
 
-<div>
-
-<h2>Bom dia, Ana</h2>
+<h2>Chamados</h2>
 
 <p>
-312 demandas ativas •
-21 pendentes •
-17 aprovações •
-8 atrasadas
+Visualize e acompanhe todas as demandas do Marketing.
 </p>
 
 </div>
 
-</div>
+<!-- FILTROS -->
 
-<div class="kpis">
-
-<div class="kpi">
-<div class="kpi-number">312</div>
-<div class="kpi-label">Demandas</div>
-</div>
-
-<div class="kpi">
-<div class="kpi-number">58</div>
-<div class="kpi-label">Andamento</div>
-</div>
-
-<div class="kpi">
-<div class="kpi-number">21</div>
-<div class="kpi-label">Pendentes</div>
-</div>
-
-<div class="kpi">
-<div class="kpi-number">17</div>
-<div class="kpi-label">Aprovação</div>
-</div>
-
-<div class="kpi">
-<div class="kpi-number">9</div>
-<div class="kpi-label">Atrasadas</div>
-</div>
-
-<div class="kpi">
-<div class="kpi-number">228</div>
-<div class="kpi-label">Concluídas</div>
-</div>
-
-</div>
-
-<div class="card">
-
-<div style="
-display:flex;
-justify-content:space-between;
-gap:12px;
-flex-wrap:wrap;
-">
+<div class="filters">
 
 <input
-placeholder="Pesquisar demanda..."
-style="
-height:46px;
-padding:0 14px;
-border:1px solid #E2E8F0;
-border-radius:12px;
-min-width:250px;
-">
+type="text"
+placeholder="Pesquisar demanda...">
 
-<select style="
-height:46px;
-padding:0 14px;
-border-radius:12px;
-border:1px solid #E2E8F0;
-">
+<select>
 <option>Responsável</option>
 </select>
 
-<select style="
-height:46px;
-padding:0 14px;
-border-radius:12px;
-border:1px solid #E2E8F0;
-">
+<select>
 <option>Prioridade</option>
 </select>
 
-<select style="
-height:46px;
-padding:0 14px;
-border-radius:12px;
-border:1px solid #E2E8F0;
-">
+<select>
 <option>Categoria</option>
 </select>
 
-<select style="
-height:46px;
-padding:0 14px;
-border-radius:12px;
-border:1px solid #E2E8F0;
-">
+<select>
 <option>Prazo</option>
 </select>
 
-<select style="
-height:46px;
-padding:0 14px;
-border-radius:12px;
-border:1px solid #E2E8F0;
-">
+<div class="view-selector">
+
+<select>
+
 <option>Kanban</option>
+
 <option>Lista</option>
+
 <option>Calendário</option>
+
 <option>Gantt</option>
+
 </select>
 
 </div>
 
 </div>
+
+<!-- KANBAN -->
 
 <div class="card">
 
@@ -266,230 +293,130 @@ border:1px solid #E2E8F0;
 
 <br>
 
-<div style="
-display:flex;
-gap:16px;
-overflow-x:auto;
-padding-bottom:12px;
-">
+<div class="kanban-board">
 
-<!-- NOVO -->
+<div class="kanban-column">
 
-<div style="min-width:300px;background:#F1F5F9;border-radius:16px;padding:14px;">
-<div style="display:flex;justify-content:space-between;margin-bottom:12px;">
+<div class="column-header">
+
 <strong>Novo</strong>
-<span>12</span>
+
+<span class="column-count">
+XXXX
+</span>
+
 </div>
 
-<!-- CARD -->
+<div class="placeholder">
 
-<div style="background:white;padding:14px;border-radius:14px;box-shadow:0 4px 10px rgba(0,0,0,.05);">
-<div style="font-size:12px;color:#94A3B8;">#1041</div>
-<br>
-<strong>Campanha Black Friday</strong>
-
-<p style="font-size:13px;margin-top:8px;color:#64748B;">Comercial</p>
-<p style="font-size:13px;color:#64748B;">Juana Talini</p>
-
-<div style="display:flex;gap:8px;margin-top:12px;margin-bottom:12px;">
-<span style="background:#FEE2E2;color:#DC2626;padding:4px 8px;border-radius:999px;font-size:12px;">Alta</span>
-<span style="background:#DCFCE7;color:#16A34A;padding:4px 8px;border-radius:999px;font-size:12px;">No Prazo</span>
-</div>
-
-<strong>Prazo:</strong> 30/09
-
-<div style="height:8px;background:#E2E8F0;border-radius:999px;margin-top:12px;">
-<div style="height:100%;width:10%;background:#00995D;"></div>
-</div>
-
-<div style="margin-top:8px;font-size:13px;font-weight:600;">
-10%
-</div>
-
-<div style="display:flex;gap:16px;align-items:center;margin-top:12px;color:#64748B;">
-
-<div style="display:flex;align-items:center;gap:6px;">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2">
-<path d="M9 11L12 14L22 4"></path>
-<path d="M21 12V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H16"></path>
-</svg>
-<span>1/8</span>
-</div>
-
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2">
-<path d="M21.44 11.05L12.25 20.24A5 5 0 0 1 5.18 13.17L14.37 4A3 3 0 0 1 18.62 8.24L9.42 17.44A1 1 0 0 1 8 16.03L16.49 7.54"></path>
-</svg>
+&lt;!-- COLE CARD AQUI --&gt;
 
 </div>
 
 </div>
-</div>
 
-<!-- ATENDIMENTO -->
+<div class="kanban-column">
 
-<div style="min-width:300px;background:#F1F5F9;border-radius:16px;padding:14px;">
-<div style="display:flex;justify-content:space-between;margin-bottom:12px;">
+<div class="column-header">
+
 <strong>Atendimento</strong>
-<span>8</span>
-</div>
+
+<span class="column-count">
+XXXX
+</span>
+
 </div>
 
-<!-- PLANEJAMENTO -->
+<div class="placeholder">
 
-<div style="min-width:300px;background:#F1F5F9;border-radius:16px;padding:14px;">
-<div style="display:flex;justify-content:space-between;margin-bottom:12px;">
+&lt;!-- COLE CARD AQUI --&gt;
+
+</div>
+
+</div>
+
+<div class="kanban-column">
+
+<div class="column-header">
+
 <strong>Planejamento</strong>
-<span>15</span>
-</div>
+
+<span class="column-count">
+XXXX
+</span>
+
 </div>
 
-<!-- CRIAÇÃO -->
+<div class="placeholder">
 
-<div style="min-width:300px;background:#F1F5F9;border-radius:16px;padding:14px;">
-<div style="display:flex;justify-content:space-between;margin-bottom:12px;">
+&lt;!-- COLE CARD AQUI --&gt;
+
+</div>
+
+</div>
+
+<div class="kanban-column">
+
+<div class="column-header">
+
 <strong>Criação</strong>
-<span>21</span>
-</div>
 
-<div style="background:white;padding:14px;border-radius:14px;box-shadow:0 4px 10px rgba(0,0,0,.05);">
-
-<div style="font-size:12px;color:#94A3B8;">#1024</div>
-
-<br>
-
-<strong>Campanha Setembro</strong>
-
-<p style="font-size:13px;margin-top:8px;color:#64748B;">Comercial</p>
-<p style="font-size:13px;color:#64748B;">Ana Luiza</p>
-
-<div style="display:flex;gap:8px;margin-top:12px;margin-bottom:12px;">
-
-<span style="background:#FEE2E2;color:#DC2626;padding:4px 8px;border-radius:999px;font-size:12px;">
-Alta
-</span>
-
-<span style="background:#FEF3C7;color:#D97706;padding:4px 8px;border-radius:999px;font-size:12px;">
-Atenção
+<span class="column-count">
+XXXX
 </span>
 
 </div>
 
-<strong>Prazo:</strong> 20/09
+<div class="placeholder">
 
-<div style="
-height:8px;
-background:#E2E8F0;
-border-radius:999px;
-margin-top:12px;
-overflow:hidden;
-">
-
-<div style="
-height:100%;
-width:65%;
-background:#00995D;
-">
-</div>
-
-</div>
-
-<div style="
-margin-top:8px;
-font-size:13px;
-font-weight:600;
-">
-65%
-</div>
-
-<div style="
-display:flex;
-gap:16px;
-align-items:center;
-margin-top:12px;
-color:#64748B;
-">
-
-<div style="
-display:flex;
-align-items:center;
-gap:6px;
-">
-
-<svg width="16"
-height="16"
-viewBox="0 0 24 24"
-fill="none"
-stroke="#64748B"
-stroke-width="2">
-
-<path d="M9 11L12 14L22 4"></path>
-
-<path d="M21 12V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H16"></path>
-
-</svg>
-
-<span>4/8</span>
-
-</div>
-
-<svg width="16"
-height="16"
-viewBox="0 0 24 24"
-fill="none"
-stroke="#64748B"
-stroke-width="2">
-
-<path d="M21.44 11.05L12.25 20.24A5 5 0 0 1 5.18 13.17L14.37 4A3 3 0 0 1 18.62 8.24L9.42 17.44A1 1 0 0 1 8 16.03L16.49 7.54"></path>
-
-</svg>
+&lt;!-- COLE CARD AQUI --&gt;
 
 </div>
 
 </div>
 
-</div>
+<div class="kanban-column">
 
-<!-- PENDENTE -->
+<div class="column-header">
 
-<div style="min-width:300px;background:#FFF8E7;border-radius:16px;padding:14px;">
-<div style="display:flex;justify-content:space-between;margin-bottom:12px;">
 <strong>Pendente</strong>
-<span>7</span>
-</div>
+
+<span class="column-count">
+XXXX
+</span>
+
 </div>
 
-<!-- APROVAÇÃO -->
+<div class="placeholder">
 
-<div style="min-width:300px;background:#F1F5F9;border-radius:16px;padding:14px;">
-<div style="display:flex;justify-content:space-between;margin-bottom:12px;">
+&lt;!-- COLE CARD AQUI --&gt;
+
+</div>
+
+</div>
+
+<div class="kanban-column">
+
+<div class="column-header">
+
 <strong>Aprovação</strong>
-<span>5</span>
-</div>
+
+<span class="column-count">
+XXXX
+</span>
+
 </div>
 
-<!-- DISPARO -->
+<div class="placeholder">
 
-<div style="min-width:300px;background:#F1F5F9;border-radius:16px;padding:14px;">
-<div style="display:flex;justify-content:space-between;margin-bottom:12px;">
-<strong>Disparo</strong>
-<span>3</span>
-</div>
-</div>
-
-<!-- CONCLUÍDO -->
-
-<div style="min-width:300px;background:#F1F5F9;border-radius:16px;padding:14px;">
-<div style="display:flex;justify-content:space-between;margin-bottom:12px;">
-<strong>Concluído</strong>
-<span>41</span>
-</div>
-</div>
+&lt;!-- COLE CARD AQUI --&gt;
 
 </div>
 
 </div>
 
+<div class="kanban-column">
 
+<div class="column-header">
 
-</body>
-</html>
+<strong>
