@@ -76,7 +76,7 @@ font-size:34px;
 
 .kpis{
 display:grid;
-grid-template-columns:repeat(6,1fr);
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 margin-bottom:24px;
 }
@@ -142,7 +142,7 @@ Configurações
 
 <div>
 
-<h2>Bom dia, Ana 👋</h2>
+<h2>Bom dia, Ana</h2>
 
 <p>
 312 demandas ativas •
@@ -191,17 +191,70 @@ Configurações
 
 <div class="card">
 
-<h3>
-Dashboard High Fidelity V1
-</h3>
+<div style="
+display:flex;
+justify-content:space-between;
+gap:12px;
+flex-wrap:wrap;
+">
 
-<br>
+<input
+placeholder="Pesquisar demanda..."
+style="
+height:46px;
+padding:0 14px;
+border:1px solid #E2E8F0;
+border-radius:12px;
+min-width:250px;
+">
 
-<p>
-Próximo passo:
-Kanban High Fidelity com visualização:
-Kanban, Lista, Calendário e Gantt.
-</p>
+<select style="
+height:46px;
+padding:0 14px;
+border-radius:12px;
+border:1px solid #E2E8F0;
+">
+<option>Responsável</option>
+</select>
+
+<select style="
+height:46px;
+padding:0 14px;
+border-radius:12px;
+border:1px solid #E2E8F0;
+">
+<option>Prioridade</option>
+</select>
+
+<select style="
+height:46px;
+padding:0 14px;
+border-radius:12px;
+border:1px solid #E2E8F0;
+">
+<option>Categoria</option>
+</select>
+
+<select style="
+height:46px;
+padding:0 14px;
+border-radius:12px;
+border:1px solid #E2E8F0;
+">
+<option>Prazo</option>
+</select>
+
+<select style="
+height:46px;
+padding:0 14px;
+border-radius:12px;
+border:1px solid #E2E8F0;
+">
+<option>Kanban</option>
+<option>Lista</option>
+<option>Calendário</option>
+<option>Gantt</option>
+</select>
 
 </div>
 
