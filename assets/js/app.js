@@ -3,7 +3,18 @@ document.getElementById('viewSelector');
 
 viewSelector.addEventListener('change', function(){
 
-    alert(this.value);
+    document
+    .querySelectorAll('.view-content')
+    .forEach(view => {
+
+        console.log(view.id);
+
+        view.style.display = 'none';
+
+    });
+
+    document
+    .getElementById(this.value)
+    .style.display = 'block';
 
 });
-``
