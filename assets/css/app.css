@@ -277,3 +277,69 @@ margin-top:12px;
     color:#64748B;
 }
 
+/* GANTT */
+
+.gantt-container{
+
+    border:1px solid #E2E8F0;
+
+    border-radius:16px;
+
+    overflow:hidden;
+}
+
+.gantt-header{
+
+    display:flex;
+
+    background:#F8FAFC;
+
+    border-bottom:1px solid #E2E8F0;
+}
+
+.gantt-task-column{
+
+    width:280px;
+
+    padding:16px;
+
+    font-weight:600;
+
+    border-right:1px solid #E2E8F0;
+}
+
+.gantt-timeline{
+
+    flex:1;
+
+    display:grid;
+
+    grid-template-columns:repeat(10,1fr);
+}
+
+.gantt-timeline div{
+
+    padding:16px;
+
+    text-align:center;
+
+    border-right:1px solid #E2E8F0;
+
+    color:#64748B;
+}
+
+.gantt-row{
+
+    display:flex;
+
+    min-height:80px;
+
+    border-bottom:1px solid #E2E8F0;
+}
+
+.gantt-bar-area{
+
+    flex:1;
+
+    background:#FFFFFF;
+}
