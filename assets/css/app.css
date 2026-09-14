@@ -511,20 +511,38 @@ margin-top:12px;
 ``
 .home-row{
 
-    display:flex;
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
 
     gap:16px;
 
-    margin-bottom:16px;
+    margin-bottom:24px;
+
+    width:100%;
 }
 
-.home-row .card:first-child{
+.home-row > .card{
 
-    flex:2;
+    width:100%;
+
+    margin:0;
 }
+.placeholder-large{
 
-.home-row .card:last-child{
+    height:320px;
 
-    flex:1;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:2px dashed #CBD5E1;
+
+    border-radius:12px;
+
+    color:#94A3B8;
+
+    margin-top:16px;
 }
-`
