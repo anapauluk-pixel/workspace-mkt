@@ -518,16 +518,13 @@ margin-top:12px;
     gap:16px;
 
     margin-bottom:24px;
-
-    width:100%;
 }
 
 .home-row > .card{
 
     width:100%;
-
-    margin:0;
 }
+
 .placeholder-large{
 
     height:320px;
