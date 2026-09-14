@@ -509,3 +509,32 @@ margin-top:12px;
     margin-top:8px;
 }
 ``
+.home-row{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:16px;
+
+    margin-bottom:16px;
+}
+
+.placeholder-large{
+
+    height:320px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:2px dashed #CBD5E1;
+
+    border-radius:12px;
+
+    color:#94A3B8;
+
+    margin-top:16px;
+}
