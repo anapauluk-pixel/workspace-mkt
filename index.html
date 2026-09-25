@@ -9,12 +9,12 @@
 
     <title>Workspace MKT</title>
 
-    <link rel="stylesheet" href="./assets/css/theme.css"> 
-    <link rel="stylesheet" href="./assets/css/app.css">
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/app.css"> 
     <link rel="stylesheet" href="./assets/css/layout.css"> 
     <link rel="stylesheet" href="./assets/css/components.css"> 
-    <link rel="stylesheet" href="./assets/css/views.css">​‌
-
+    <link rel="stylesheet" href="./assets/css/views.css">
+    
 </head>
 
 <body>
@@ -84,4 +84,106 @@
                         <button
                             type="button"
                             class="menu-item"
- 
+                            data-route="configuracoes">
+                            Configurações
+                        </button>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </aside>
+
+        <div id="main-layout">
+
+            <header id="header">
+
+                <div class="header-left">
+
+                    <button
+                        type="button"
+                        id="sidebar-toggle">
+                        ☰
+                    </button>
+
+                    <div id="breadcrumb">
+
+                        Workspace MKT
+
+                        <span class="breadcrumb-separator">
+                            &gt;
+                        </span>
+
+                        Dashboard
+
+                    </div>
+
+                </div>
+
+                <div class="header-center">
+
+                    <input
+                        type="text"
+                        id="global-search"
+                        placeholder="Pesquisar...">
+
+                </div>
+
+                <div class="header-right">
+
+                    <button
+                        type="button"
+                        id="header-filter-button">
+                        Filtros
+                    </button>
+
+                    <button
+                        type="button"
+                        id="header-action-button">
+                        Nova Demanda
+                    </button>
+
+                    <button
+                        type="button"
+                        id="user-button">
+                        Ana Luiza
+                    </button>
+
+                </div>
+
+            </header>
+
+            <main id="main-content">
+
+                <section class="view-placeholder">
+
+                    <h1>Dashboard</h1>
+
+                    <p>
+                        Workspace MKT iniciado com sucesso.
+                    </p>
+
+                </section>
+
+            </main>
+
+        </div>
+
+        <div id="drawer-container"></div>
+
+        <div id="modal-container"></div>
+
+        <div id="toast-container"></div>
+
+    </div>
+
+    <link rel="stylesheet" href="./assets/css/theme.css">
+    <link rel="stylesheet" href="./assets/css/app.css"> 
+    <link rel="stylesheet" href="./assets/css/layout.css"> 
+    <link rel="stylesheet" href="./assets/css/components.css"> 
+    <link rel="stylesheet" href="./assets/css/views.css">
+
+</body>
+
+</html>
