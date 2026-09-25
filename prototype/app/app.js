@@ -1,6 +1,24 @@
 /**
  * Workspace MKT
- * Arquivo principal da aplicação
+ * Ponto de entrada da aplicação
  */
 
-console.log("Workspace MKT iniciado");
+const App = {
+
+    init() {
+
+        console.log("Workspace MKT iniciado");
+
+        State.initialized = true;
+
+        Router.navigate(Routes.DASHBOARD);
+
+    }
+
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    App.init();
+
+});
