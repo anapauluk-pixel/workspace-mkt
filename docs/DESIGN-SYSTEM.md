@@ -446,3 +446,12 @@ Evitar:
 - Excesso de cores
 - Menus excessivamente profundos
 - Visual poluído
+
+
+Observação:
+ 
+A pasta pages é temporariamente utilizada para armazenar
+visualizações do protótipo.
+ 
+Na arquitetura SPA definitiva, estas páginas representam
+views da aplicação e não páginas independentes.
