@@ -1,19 +1,5 @@
-*{
+body{
     margin:0;
-    paddi*g:0;
-    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    background:#f8f9fa;
 }
-*body{
-    font-family: Arial, sans*serif;
-    background:*var(--gray-100);
-}
-
-header{
-    ba*kground: var(--green-primary);
-   *color:white;
-    padding*20px;
-}
-
-main{
-    padding:30px;
-}*
