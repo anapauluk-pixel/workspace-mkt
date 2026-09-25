@@ -1,32 +1,18 @@
 /**
- * Router da aplicação
+ * Workspace MKT
+ * Controle de navegação da SPA
  */
 
 const Router = {
 
+    currentRoute: Routes.DASHBOARD,
+
     navigate(route) {
 
-        console.log("Navegando para:", route);
+        this.currentRoute = route;
+
+        console.log("Rota ativa:", route);
 
     }
-
-};
-/**
- * Rotas principais da aplicação
- */
-
-const Routes = {
-
-    dashboard: "dashboard",
-
-    demandas: "demandas",
-
-    aprovacoes: "aprovacoes",
-
-    equipe: "equipe",
-
-    relatorios: "relatorios",
-
-    configuracoes: "configuracoes"
 
 };
