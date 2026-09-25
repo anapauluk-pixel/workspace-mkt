@@ -11,3 +11,22 @@ const Router = {
     }
 
 };
+/**
+ * Rotas principais da aplicação
+ */
+
+const Routes = {
+
+    dashboard: "dashboard",
+
+    demandas: "demandas",
+
+    aprovacoes: "aprovacoes",
+
+    equipe: "equipe",
+
+    relatorios: "relatorios",
+
+    configuracoes: "configuracoes"
+
+};
