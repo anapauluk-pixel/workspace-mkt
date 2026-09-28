@@ -1,113 +1,45 @@
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==================================================
+   HTML E BODY
+================================================== */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* ==================================================
+   BODY
+================================================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--color-background);
+    color: var(--color-text-primary);
+    overflow: hidden;
+}
+
+/* ==================================================
+   APP
+================================================== */
+
 #app {
-    display: flex;
     width: 100%;
     height: 100vh;
 }
 
-#sidebar {
-    width: 280px;
-    background: #14532d;
-    color: white;
-    padding: 24px;
-}
+/* ==================================================
+   TIPOGRAFIA
+================================================== */
 
-.sidebar-header {
-    margin-bottom: 24px;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.sidebar-navigation ul {
-    list-style: none;
-}
-
-.sidebar-navigation li {
-    margin-bottom: 8px;
-}
-
-.menu-item {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background: transparent;
-    color: white;
-    text-align: left;
-    cursor: pointer;
-}
-
-.menu-item:hover {
-    background: rgba(255,255,255,0.10);
-}
-
-.menu-item.active {
-    background: rgba(255,255,255,0.20);
-}
-
-#main-layout {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-#header {
-    height: 72px;
-    background: white;
-    border-bottom: 1px solid #dfe3e8;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0 24px;
-}
-
-.header-left,
-.header-center,
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-#sidebar-toggle {
-    width: 40px;
-    height: 40px;
-}
-
-#global-search {
-    width: 300px;
-    height: 40px;
-    padding: 0 12px;
-    border: 1px solid #dfe3e8;
-    border-radius: 8px;
-}
-
-#header-filter-button,
-#header-action-button,
-#user-button {
-    height: 40px;
-    padding: 0 16px;
-    border-radius: 8px;
-    border: 1px solid #dfe3e8;
-    background: white;
-    cursor: pointer;
-}
-
-#header-action-button {
-    background: #14532d;
-    color: white;
-    border: none;
-}
-
-#main-content {
-    flex: 1;
-    background: #f8fafc;
-}
-
-.view-placeholder {
-    padding: 32px;
-}
+h1 {
