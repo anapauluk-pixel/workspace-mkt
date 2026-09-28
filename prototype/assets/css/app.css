@@ -1,3 +1,117 @@
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==================================================
+   HTML E BODY
+================================================== */
+
+html,
 body {
-    background: red !important;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==================================================
+   BODY
+================================================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--color-background);
+    color: var(--color-text-primary);
+}
+
+/* ==================================================
+   APP
+================================================== */
+
+#app {
+    width: 100%;
+    height: 100vh;
+}
+
+/* ==================================================
+   LISTAS
+================================================== */
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* ==================================================
+   LINKS
+================================================== */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==================================================
+   BOTÕES
+================================================== */
+
+button {
+    font: inherit;
+}
+
+/* ==================================================
+   INPUTS
+================================================== */
+
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+/* ==================================================
+   TÍTULOS
+================================================== */
+
+h1 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+}
+
+h2 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+h3 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+}
+
+/* ==================================================
+   PARÁGRAFOS
+================================================== */
+
+p {
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+/* ==================================================
+   VIEW PLACEHOLDER
+================================================== */
+
+.view-placeholder {
+    padding: var(--space-6);
+}
+
+.view-placeholder h1 {
+    margin-bottom: var(--space-4);
 }
