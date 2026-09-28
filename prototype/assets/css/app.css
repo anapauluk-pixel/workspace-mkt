@@ -1,117 +1,113 @@
-/* ==================================================
-   RESET
-================================================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* ==================================================
-   HTML E BODY
-================================================== */
-
-html,
-body {
-    width: 100%;
-    height: 100%;
-}
-
-/* ==================================================
-   BODY
-================================================== */
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--color-background);
-    color: var(--color-text-primary);
-}
-
-/* ==================================================
-   APP
-================================================== */
-
 #app {
+    display: flex;
     width: 100%;
     height: 100vh;
 }
 
-/* ==================================================
-   LISTAS
-================================================== */
+#sidebar {
+    width: 280px;
+    background: #14532d;
+    color: white;
+    padding: 24px;
+}
 
-ul,
-ol {
+.sidebar-header {
+    margin-bottom: 24px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sidebar-navigation ul {
     list-style: none;
 }
 
-/* ==================================================
-   LINKS
-================================================== */
-
-a {
-    text-decoration: none;
-    color: inherit;
+.sidebar-navigation li {
+    margin-bottom: 8px;
 }
 
-/* ==================================================
-   BOTÕES
-================================================== */
-
-button {
-    font: inherit;
+.menu-item {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: white;
+    text-align: left;
+    cursor: pointer;
 }
 
-/* ==================================================
-   INPUTS
-================================================== */
-
-input,
-textarea,
-select {
-    font: inherit;
+.menu-item:hover {
+    background: rgba(255,255,255,0.10);
 }
 
-/* ==================================================
-   TÍTULOS
-================================================== */
-
-h1 {
-    font-size: var(--font-size-2xl);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-text-primary);
+.menu-item.active {
+    background: rgba(255,255,255,0.20);
 }
 
-h2 {
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-text-primary);
+#main-layout {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-h3 {
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-text-primary);
+#header {
+    height: 72px;
+    background: white;
+    border-bottom: 1px solid #dfe3e8;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 24px;
 }
 
-/* ==================================================
-   PARÁGRAFOS
-================================================== */
-
-p {
-    color: var(--color-text-secondary);
-    line-height: 1.5;
+.header-left,
+.header-center,
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-/* ==================================================
-   VIEW PLACEHOLDER
-================================================== */
+#sidebar-toggle {
+    width: 40px;
+    height: 40px;
+}
+
+#global-search {
+    width: 300px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid #dfe3e8;
+    border-radius: 8px;
+}
+
+#header-filter-button,
+#header-action-button,
+#user-button {
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 8px;
+    border: 1px solid #dfe3e8;
+    background: white;
+    cursor: pointer;
+}
+
+#header-action-button {
+    background: #14532d;
+    color: white;
+    border: none;
+}
+
+#main-content {
+    flex: 1;
+    background: #f8fafc;
+}
 
 .view-placeholder {
-    padding: var(--space-6);
-}
-
-.view-placeholder h1 {
-    margin-bottom: var(--space-4);
+    padding: 32px;
 }
