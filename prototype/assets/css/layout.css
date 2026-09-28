@@ -1,100 +1,179 @@
-.layout {
+#app {
     display: flex;
-    min-height: 100vh;
+    width: 100%;
+    height: 100vh;
 }
 
-.sidebar {
+#sidebar {
     width: 280px;
-    background: #14532d;
-    color: white;
-    transition: 0.3s;
+    background: var(--sidebar-background);
+    color: var(--sidebar-text);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
 }
 
 .sidebar-header {
-    padding: 24px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: var(--space-5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
 
-.sidebar-header h1 {
-    font-size: 20px;
+.logo {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
 }
 
-.sidebar-menu {
-    padding: 20px;
+.sidebar-navigation {
+    padding: var(--space-4);
 }
 
-.menu-group {
-    margin-bottom: 24px;
-}
-
-.menu-title {
-    display: block;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    opacity: 0.7;
-    margin-bottom: 10px;
-}
-
-.sidebar-menu ul {
+.sidebar-navigation ul {
     list-style: none;
 }
 
-.sidebar-menu li {
-    margin-bottom: 4px;
+.sidebar-navigation li {
+    margin-bottom: var(--space-2);
 }
 
-.sidebar-menu a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 10px 12px;
-    border-radius: 8px;
+.menu-item {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    border: none;
+    border-radius: var(--radius-md);
+    background: transparent;
+    color: var(--sidebar-text);
+    text-align: left;
+    cursor: pointer;
+    transition: var(--transition-fast);
 }
 
-.sidebar-menu a:hover {
-    background: rgba(255,255,255,0.1);
+.menu-item:hover {
+    background: var(--sidebar-hover);
 }
 
-.sidebar-menu a.active {
-    background: rgba(255,255,255,0.15);
+.menu-item.active {
+    background: var(--sidebar-active);
 }
 
-.main {
+#main-layout {
     flex: 1;
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
-.topbar {
-    height: 72px;
-    background: white;
-    border-bottom: 1px solid #e2e8f0;
+#header {
+    height: var(--header-height);
+    background: var(--header-background);
+    border-bottom: 1px solid var(--header-border);
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 24px;
+    padding: 0 var(--space-5);
 }
 
-.topbar-left,
-.topbar-right {
+.header-left,
+.header-center,
+.header-right {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: var(--space-3);
 }
 
-.breadcrumb {
-    font-weight: 600;
+#sidebar-toggle {
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    background: var(--color-surface);
+}
+
+#breadcrumb {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
 }
 
 .breadcrumb-separator {
-    margin: 0 6px;
-    color: #94a3b8;
+    margin: 0 var(--space-2);
+    color: var(--color-text-muted);
 }
 
-.page-content {
+#global-search {
+    width: 320px;
+    height: 40px;
+
+    padding: 0 var(--space-3);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    background: var(--color-surface);
+}
+
+#header-filter-button,
+#user-button {
+    height: 40px;
+
+    padding: 0 var(--space-4);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    background: var(--color-surface);
+}
+
+#header-action-button {
+    height: 40px;
+
+    padding: 0 var(--space-4);
+
+    border: none;
+    border-radius: var(--radius-md);
+
+    background: var(--color-primary);
+    color: white;
+
+    font-weight: var(--font-weight-medium);
+}
+
+#header-action-button:hover {
+    background: var(--color-primary-hover);
+}
+
+#main-content {
     flex: 1;
-    padding: 24px;
+    overflow: auto;
+    background: var(--color-background);
+}
+
+.view-placeholder {
+    padding: var(--space-6);
+}
+
+#drawer-container,
+#modal-container,
+#toast-container {
+    position: fixed;
+    pointer-events: none;
+}
+
+#drawer-container {
+    top: 0;
+    right: 0;
+    z-index: var(--z-drawer);
+}
+
+#modal-container {
+    inset: 0;
+    z-index: var(--z-modal);
+}
+
+#toast-container {
+    top: var(--space-5);
+    right: var(--space-5);
+    z-index: var(--z-toast);
 }
